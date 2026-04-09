@@ -6,3 +6,37 @@ html, body {
 body {
     background: linear-gradient(135deg, black 10%, rgb(6, 0, 65) 45%, rgb(30, 0, 39) 65%, black 90%);
 }
+
+.título-de-seção {
+    color: #2837a0;
+    font-family: 'Carrois Gothic';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.subtítulo-de-seção, p {
+    font-family: 'Poppins';
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#imagem-equipe {
+    margin-left: 2rem;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 0.3rem;
+}
+
