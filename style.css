@@ -340,6 +340,78 @@ footer {
     display: block;
 }
 
+.container-contato {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario-contato-caixa {
+    background-color: #4C1870;
+    width: 602px;
+    height: 733px;
+    border-radius: 35px;
+    text-align: center;
+}
+
+.input-contato {
+    background-color: #6C28A0;
+    border-radius: 15px;
+    width: 520px;
+    border-color: #6C28A0;
+    color: #B9B8B8;
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 20px;
+}
+.btn-whatsapp {
+    background-color: #4C1870;
+    color: #fff;
+    width: 482px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+        margin-left: 2rem;
+    margin-right: 1rem;
+}
+.entre-contato {
+    margin-bottom: -30px;
+    
+}
+.faca-diagnostico {
+    margin-bottom: -20px;
+}
+h2 {
+    font-family: sans-serif;
+    color: #fff;
+    text-align: left;
+}
+h1 {
+    font-family: sans-serif;
+    color: #fff;
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+#mensagem {
+    margin-top: 40px;
+    height: 246px;
+}
+
+#nome {
+    margin-top: 40px;
+    height: 60px;
+}
+
+#email {
+    margin-top: 40px;
+    height: 60px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .home {
