@@ -1,15 +1,37 @@
-const toggle = document.getElementById('menuToggle');
-const menu = document.getElementById('mainmenu');
+document.addEventListener('DOMContentLoaded', () => {
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open');
-  menu.classList.toggle('open');
-});
+    // Menu Mobile
+    const menuMobile = document.getElementById('menuMobile');
+    const textomenu = document.getElementById('textomenu');
 
-// Fecha ao clicar em um link
-menu.querySelectorAll('.menu-item').forEach(link => {
-  link.addEventListener('click', () => {
-    toggle.classList.remove('open');
-    menu.classList.remove('open');
-  });
+    if (menuMobile && textomenu) {
+        menuMobile.addEventListener('click', () => {
+            menuMobile.classList.toggle('open');
+            textomenu.classList.toggle('open');
+        });
+
+        textomenu.querySelectorAll('.menu-item').forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.remove('open');
+                textomenu.classList.remove('open');
+            });
+        });
+    }
+
+    // Menu esconde ao rolar para baixo
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > lastScroll && currentScroll > 80) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScroll = currentScroll;
+    });
+
 });

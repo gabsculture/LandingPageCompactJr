@@ -6,11 +6,13 @@ body {
 
 body {
     background: linear-gradient(135deg, #100212 21%, #320F4B 39%, #212950 57%, #100212 94%);
+    background-attachment: fixed;
 }
 
 .título-de-seção {
     color: #2837a0;
-    font-family: 'Carrois Gothic';
+    font-family: 'Carrois Gothic', sans-serif;
+    font-weight: 100;
     font-size: 2rem;
     text-align: center;
 }
@@ -18,6 +20,7 @@ body {
 .subtítulo-de-seção,
 p {
     font-family: 'Poppins';
+    font-weight: 400;
     font-size: 3rem;
     color: white;
     text-align: center;
@@ -48,14 +51,19 @@ header {
     left: 120px;
     right: 120px;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
-.header-inner {
+header.hidden {
+    transform: translateY(-120px);
+}
+
+.header-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 52px;
-    background: linear-gradient(135deg, #100212 21%, #320F4B 39%, #212950 57%, #100212 94%);
+    background: linear-gradient(135deg, #320F4B 20%, #212950 45%, #100212 94%);
     border-radius: 50px;
     padding: 0 28px;
 }
@@ -65,7 +73,10 @@ header {
     display: block;
 }
 
-#mainmenu {
+#textomenu {
+    font-family: 'Carrois Gothic', sans-serif;
+    text-decoration: none;
+    font-weight: 100;
     list-style: none;
     display: flex;
     gap: 32px;
@@ -73,22 +84,22 @@ header {
     padding: 0;
 }
 
-#mainmenu .menu-item {
+.menu-item {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
     transition: color 0.2s;
 }
 
-#mainmenu .menu-item:hover {
+.menu-item:visited {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-item:hover {
     color: #fff;
 }
 
 /* Hambúrguer — escondido no desktop */
-.menu-toggle {
+.menu-mobile {
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -98,7 +109,7 @@ header {
     padding: 4px;
 }
 
-.menu-toggle span {
+.menu-mobile span {
     display: block;
     width: 22px;
     height: 2px;
@@ -115,11 +126,11 @@ header {
         right: 16px;
     }
 
-    .menu-toggle {
+    .menu-mobile {
         display: flex;
     }
 
-    #mainmenu {
+    #textomenu {
         display: none;
         position: absolute;
         top: calc(100% + 8px);
@@ -132,42 +143,44 @@ header {
         padding: 8px 0;
     }
 
-    #mainmenu.open {
+    #textomenu.open {
         display: flex;
     }
 
-    #mainmenu li a {
+    #textomenu li a {
         display: block;
         padding: 12px 24px;
         font-size: 12px;
     }
 
     /* Animação do X ao abrir */
-    .menu-toggle.open span:nth-child(1) {
+    .menu-mobile.open span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
 
-    .menu-toggle.open span:nth-child(2) {
+    .menu-mobile.open span:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggle.open span:nth-child(3) {
+    .menu-mobile.open span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
 }
 
 footer {
-    background: #0f0f1a;
+
     padding: 0 120px 40px;
 }
 
-.footer-divider {
+.footer-linha {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     margin-bottom: 40px;
+    margin-top: 60px;
+    /* adicione essa linha */
 }
 
-.footer-inner {
+.footer-caixa {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -185,7 +198,7 @@ footer {
     display: block;
 }
 
-.footer-address {
+.footer-endereco {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.6;
@@ -193,6 +206,8 @@ footer {
 }
 
 .footer-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
@@ -200,6 +215,8 @@ footer {
 }
 
 .footer-nav {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -246,18 +263,18 @@ footer {
         padding: 0 20px 32px;
     }
 
-    .footer-inner {
+    .footer-caixa {
         flex-direction: column;
         gap: 32px;
     }
 }
 
-.hero {
-    background: #0f0f1a;
+.home {
+
     padding: 120px 120px 80px;
 }
 
-.hero-inner {
+.home-caixa {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -266,12 +283,14 @@ footer {
     margin: 0 auto;
 }
 
-.hero-content {
+.home-content {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     flex: 1;
     max-width: 420px;
 }
 
-.hero-title {
+.home-title {
     color: #fff;
     font-size: 42px;
     font-weight: 700;
@@ -280,38 +299,42 @@ footer {
     letter-spacing: 1px;
 }
 
-.hero-text {
+.home-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.65);
     font-size: 15px;
     line-height: 1.7;
     margin: 0 0 32px;
 }
 
-.hero-btn {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 12px 24px;
-  background: #fff;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  transition: background 0.2s, opacity 0.2s;
+.home-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 12px 24px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    transition: background 0.2s, opacity 0.2s;
 }
 
-.hero-btn:hover {
-  opacity: 0.85;
+.home-btn:hover {
+    opacity: 0.85;
 }
 
 
-.hero-image {
+.home-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-.hero-image img {
+.home-image img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -319,24 +342,24 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hero {
+    .home {
         padding: 100px 20px 60px;
     }
 
-    .hero-inner {
+    .home-caixa {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-content {
+    .home-content {
         max-width: 100%;
     }
 
-    .hero-title {
+    .home-title {
         font-size: 30px;
     }
 
-    .hero-image {
+    .home-image {
         justify-content: center;
     }
 }
