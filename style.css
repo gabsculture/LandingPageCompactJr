@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
 body {
-    background: linear-gradient(135deg, black 10%, rgb(6, 0, 65) 45%, rgb(30, 0, 39) 65%, black 90%);
+    background: linear-gradient(135deg, #100212 21%, #320F4B 39%, #212950 57%, #100212 94%);
 }
 
 .título-de-seção {
@@ -14,7 +15,8 @@ body {
     text-align: center;
 }
 
-.subtítulo-de-seção, p {
+.subtítulo-de-seção,
+p {
     font-family: 'Poppins';
     font-size: 3rem;
     color: white;
@@ -40,3 +42,301 @@ p {
     border-radius: 0.3rem;
 }
 
+header {
+    position: fixed;
+    top: 20px;
+    left: 120px;
+    right: 120px;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    background: linear-gradient(135deg, #100212 21%, #320F4B 39%, #212950 57%, #100212 94%);
+    border-radius: 50px;
+    padding: 0 28px;
+}
+
+#logo img {
+    height: 32px;
+    display: block;
+}
+
+#mainmenu {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+#mainmenu .menu-item {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+#mainmenu .menu-item:hover {
+    color: #fff;
+}
+
+/* Hambúrguer — escondido no desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        top: 16px;
+        left: 16px;
+        right: 16px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #mainmenu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #100212 21%, #320F4B 39%, #212950 57%, #100212 94%);
+        border-radius: 16px;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0;
+    }
+
+    #mainmenu.open {
+        display: flex;
+    }
+
+    #mainmenu li a {
+        display: block;
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    /* Animação do X ao abrir */
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+footer {
+    background: #0f0f1a;
+    padding: 0 120px 40px;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 40px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-logo img {
+    height: 36px;
+    display: block;
+}
+
+.footer-address {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 4px;
+}
+
+.footer-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Remova ou deixe vazio — o estilo de cor/bg agora vem da própria imagem */
+.social-btn.instagram,
+.social-btn.linkedin {
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 0 20px 32px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.hero {
+    background: #0f0f1a;
+    padding: 120px 120px 80px;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 420px;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+}
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 32px;
+}
+
+.hero-btn {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 24px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.hero-btn:hover {
+  opacity: 0.85;
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+}
