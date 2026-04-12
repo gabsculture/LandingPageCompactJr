@@ -340,6 +340,7 @@ footer {
     font-family: 'Carrois Gothic', sans-serif;
     font-size: 20px;
 }
+
 .btn-whatsapp {
     background-color: #4C1870;
     color: #fff;
@@ -352,21 +353,25 @@ footer {
     border-radius: 45px;
     cursor: pointer;
     transition: background-color 0.2s, opacity 0.2s;
-        margin-left: 2rem;
+    margin-left: 2rem;
     margin-right: 1rem;
 }
+
 .entre-contato {
     margin-bottom: -30px;
-    
+
 }
+
 .faca-diagnostico {
     margin-bottom: -20px;
 }
+
 h2 {
     font-family: sans-serif;
     color: #fff;
     text-align: left;
 }
+
 h1 {
     font-family: sans-serif;
     color: #fff;
@@ -374,6 +379,7 @@ h1 {
     margin-left: 2rem;
     margin-right: 1rem;
 }
+
 #mensagem {
     margin-top: 40px;
     height: 246px;
