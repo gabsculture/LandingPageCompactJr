@@ -29,21 +29,61 @@ p {
 p {
     font-size: 1rem;
     text-align: left;
-    margin-left: 2rem;
-    margin-right: 1rem;
+    margin-left: 2%;
+    margin-right: 5%;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-}
+/* HISTÓRIA */
 
 #imagem-equipe {
-    margin-left: 2rem;
-    width: 40rem;
-    height: 30rem;
+    width: 50%;
+    height: 30%;
+    margin-left: 5%;
     border-radius: 0.3rem;
 }
+
+.container_história {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.história {
+    padding: 60px 0;
+}
+
+.image_história {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image_história p {
+    margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .image_história {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #imagem-equipe {
+        width: 90%;
+        height: 30%;
+        border-radius: 0.3rem;
+    }
+
+    .image_história p {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 5%;
+    }
+}
+
+/* FIM HISTÓRIA */
+
 
 header {
     position: fixed;
@@ -393,6 +433,101 @@ h1 {
 #email {
     margin-top: 40px;
     height: 60px;
+}
+
+/* Jean */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 span {
+    color: #4f7cff;
+}
+
+/* SERVIÇOS */
+.serviços {
+    padding: 60px 0;
+}
+
+.serviços h2 {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+#card-1 {
+    background: linear-gradient(127.5deg, #320F4B 0%, #100212 21%, black 50%);
+}
+
+#card-2 {
+    background: linear-gradient(127.5deg, #320F4B 0%, #100212 21%, black 50%, black 75%, #181f3d 83%, #212950 94%);
+}
+
+#card-3 {
+    background: linear-gradient(127.5deg, black 75%, #181f3d 83%, #212950 94%);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 55%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 200%;
+    color: white;
+}
+
+.card h4 {
+    margin-top: 15px;
+    font-size: 120%;
+    color: white;
+}
+
+.card p {
+    font-size: 80%;
+    color: white;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+}
+
+.cta_serviços {
+    margin-top: 30px;
+}
+
+.cta_serviços p {
+    text-align: center;
+}
+
+.cta_serviços button {
+    background: #4f7cff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Mobile */
