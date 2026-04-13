@@ -27,15 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Header esconde ao rolar
     let lastScroll = 0;
     const header = document.querySelector('header');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.scrollY;
-        if (currentScroll > lastScroll && currentScroll > 80) {
+
+        if (currentScroll != lastScroll && currentScroll > 80) {
             header.classList.add('hidden');
+            if(header.classList.contains('hidden')) {
+                menuOverlay.classList.remove('open'); // Fecha o menu se estiver aberto
+                menuMobile.classList.remove('open');
+                textomenu.classList.remove('open');
+            }
         } else {
             header.classList.remove('hidden');
+            if(!header.classList.contains('hidden') && !textomenu.classList.contains('open')) {
+                menuOverlay.classList.add('open'); // Garante que o overlay esteja fechado
+                menuMobile.classList.add('open'); // Garante que o menu esteja fechado
+                textomenu.classList.add('open'); // Abre o menu
+            }
         }
         lastScroll = currentScroll;
-    });
+    }); 
 
 });
