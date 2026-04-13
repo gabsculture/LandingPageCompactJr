@@ -1,4 +1,9 @@
 html,
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -13,7 +18,7 @@ body {
     color: #2837a0;
     font-family: 'Carrois Gothic', sans-serif;
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 200%;
     text-align: center;
 }
 
@@ -21,9 +26,15 @@ body {
 p {
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 250%;
     color: white;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .subtítulo-de-seção {
+        font-size: 150%;
+    }
 }
 
 p {
