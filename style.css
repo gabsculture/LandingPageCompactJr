@@ -1,7 +1,7 @@
 html,
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -136,8 +136,9 @@ header.hidden {
     margin: 0;
     padding: 0;
 }
-        transform: translateY(0);
-        pointer-events: auto;
+
+transform: translateY(0);
+pointer-events: auto;
 
 .menu-item:visited {
     color: rgba(255, 255, 255, 0.7);
@@ -394,6 +395,10 @@ footer {
 }
 
 .btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background-color: #4C1870;
     color: #fff;
     width: 482px;
@@ -408,6 +413,12 @@ footer {
     margin-left: 2rem;
     margin-right: 1rem;
 }
+
+.btn-whatsapp img {
+    width: 25px;
+    height: 25px;
+}
+
 .btn-enviar {
     background-color: #6C28A0;
     color: white;
@@ -420,6 +431,7 @@ footer {
     margin-top: 3vh;
     font-size: 17px;
 }
+
 .entre-contato {
     margin-bottom: -30px;
 
@@ -462,6 +474,39 @@ h1 {
     padding-left: 1vw;
 }
 
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 48px;
+    font-family: 'Carrois Gothic', sans-serif;
+
+}
+
+.contato-item img {
+    width: 45px;
+    height: 45px;
+}
+
+.contato-item span {
+    font-size: 14px;
+    color: white;
+}
+
+.contato-item p {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+
+}
+nav a,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    color: white;
+    text-decoration: none;
+}
+
 /* Jean */
 .container {
     width: 90%;
@@ -469,6 +514,7 @@ h1 {
     margin: auto;
     text-align: center;
 }
+
 
 h2 span {
     color: #4f7cff;
