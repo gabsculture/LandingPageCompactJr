@@ -70,8 +70,14 @@ p {
     align-items: center;
 }
 
-.image_história p {
-    margin-bottom: 10%;
+.paragrafos-história {
+    display: flex;
+    flex-direction: column;
+}
+
+.paragrafos-história p {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 
@@ -733,6 +739,10 @@ nav a:active {
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ff9ba3a8eb572f01380318e461c3d6ef1adbb47
 /* Jean */
 .container {
     width: 90%;
@@ -750,6 +760,7 @@ h2 span {
 .serviços {
     padding: 60px 0;
 }
+
 
 .serviços h2 {
     text-align: center;
@@ -794,13 +805,17 @@ h2 span {
 
 .card h3 {
     margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     font-size: 200%;
     color: white;
 }
 
 .card h4 {
     margin-top: 15px;
-    font-size: 120%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 115%;
     color: white;
 }
 
@@ -821,9 +836,11 @@ h2 span {
 }
 
 .cta_serviços button {
-    background: #4f7cff;
+    background: linear-gradient(90deg, #2837a0 40%, #212950 95%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 120%;
     border: none;
-    padding: 10px 20px;
+    padding: 1% 2%;
     border-radius: 8px;
     color: white;
     cursor: pointer;
