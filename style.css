@@ -137,9 +137,6 @@ header.hidden {
     padding: 0;
 }
 
-transform: translateY(0);
-pointer-events: auto;
-
 .menu-item:visited {
     color: rgba(255, 255, 255, 0.7);
 }
@@ -318,7 +315,7 @@ footer {
 
 .home-title {
     color: #fff;
-    font-size: 42px;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.1;
     margin: 0 0 20px;
@@ -329,7 +326,7 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.65);
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.7;
     margin: 0 0 32px;
 }
@@ -832,6 +829,7 @@ h2 span {
 
     .home-title {
         font-size: 32px;
+        text-align: center;
         letter-spacing: 0.5px;
         margin-bottom: 12px;
     }
