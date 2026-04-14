@@ -985,3 +985,98 @@ h2 span {
         transform: translateY(-7px) rotate(-45deg);
     }
 }
+
+/* Carrossel */
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.container-carrossel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 200px;
+    height: 50%; 
+
+    transform: translate(-50%, -50%) scale(0.8);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 
+        transform 0.5s ease,
+        opacity 0.3s ease;
+}
+
+.left {
+    transform: translate(-160%, -50%) scale(0.8);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.active {
+    transform: translate(-63%, -50%) scale(1.4);
+    opacity: 1;
+    z-index: 3;
+}
+
+.right {
+    transform: translate(47%, -50%) scale(0.8);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-carrossel {
+    background: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+
+    .carrossel {
+        height: 250px;
+    }
+
+    .item {
+        width: 140px;
+        height: 60%;
+    }
+
+    .active {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .left {
+        transform: translate(-120%, -50%) scale(0.7);
+    }
+
+    .right {
+        transform: translate(20%, -50%) scale(0.7);
+    }
+
+    .controls {
+        display: none;
+    }
+}

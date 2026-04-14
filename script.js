@@ -61,3 +61,84 @@ document.addEventListener('DOMContentLoaded', () => {
     }); 
 
 });
+
+//Carrossel
+
+const leftBtn = document.querySelector('.btn-carrossel.left');
+const rightBtn = document.querySelector('.btn-carrossel.right');
+
+const items = document.querySelectorAll('.item');
+
+let current = 1;
+
+function updateClasses() {
+    items.forEach(item => item.classList.remove('left', 'active', 'right'));
+
+    let left = (current - 1 + items.length) % items.length;
+    let right = (current + 1) % items.length;
+
+    items[left].classList.add('left');
+    items[current].classList.add('active');
+    items[right].classList.add('right');
+}
+
+function nextSlide() {
+    current = (current + 1) % items.length;
+    updateClasses();
+}
+
+function prevSlide() {
+    current = (current - 1 + items.length) % items.length;
+    updateClasses();
+}
+
+let interval;
+
+function startAuto() {
+    interval = setInterval(nextSlide, 3000);
+}
+
+function resetAuto() {
+    clearInterval(interval);
+    startAuto();
+}
+
+rightBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAuto();
+});
+
+leftBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAuto();
+});
+
+updateClasses();
+startAuto();
+
+
+let startX = 0;
+let endX = 0;
+
+const container = document.querySelector('.container-carrossel');
+
+container.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+container.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    let diff = startX - endX;
+
+    if (diff > 50) {
+        nextSlide();
+        resetAuto();
+    } else if (diff < -50) {
+        prevSlide();
+        resetAuto();
+    }
+}
