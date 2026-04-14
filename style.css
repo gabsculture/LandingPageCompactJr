@@ -74,6 +74,7 @@ p {
     margin-bottom: 10%;
 }
 
+
 @media (max-width: 768px) {
     .image_história {
         flex-direction: column;
