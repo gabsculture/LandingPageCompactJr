@@ -137,9 +137,6 @@ header.hidden {
     padding: 0;
 }
 
-transform: translateY(0);
-pointer-events: auto;
-
 .menu-item:visited {
     color: rgba(255, 255, 255, 0.7);
 }
