@@ -144,8 +144,10 @@ header.hidden {
     padding: 0;
 }
 
-.menu-item:visited {
-    color: rgba(255, 255, 255, 0.7);
+.menu-item {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
 .menu-item:hover {
