@@ -23,8 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         overlay.addEventListener('click', fecharMenu);
     }
-
-    // Header esconde ao rolar
+    const divisor = document.getElementsByClassName('divisor');
+    
+    // Função para verificar largura da janela e aplicar/remover 'hidden' na classe 'divisor'
+    function checkWidth() {
+        //const divisor = document.querySelectorAll('divisor');
+        if (window.innerWidth >= 900) {
+            divisor.classList.add('hidden');
+        } else {
+            divisor.classList.remove('hidden');
+        }
+    }
+    // Verificar largura ao carregar a página
+    checkWidth();
+    // Verificar largura ao redimensionar a janela
+    window.addEventListener('resize', checkWidth);
+    
     let lastScroll = 0;
     const header = document.querySelector('header');
     const menuOverlay = document.getElementById('menuOverlay');

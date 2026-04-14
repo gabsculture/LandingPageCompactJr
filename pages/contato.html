@@ -38,7 +38,7 @@
                     <p class="entre-contato" style="margin-left: 0px;">ENTRE EM CONTATO</p>
                     <h1 class="faca-diagnostico" style="margin-left: 0px;">FAÇA SEU DIAGNÓSTICO <br>
                         GRATUITO</h1>
-                    <p style="margin-left: 0px;">Horário de atendimento: <br>
+                    <p id="horario" style="margin-left: 0px;">Horário de atendimento: <br>
                         08 às 12h e das 13h às 18h</p>
                     <div class="contato-item">
                         <img src="../assets/gmail.png">
@@ -82,14 +82,15 @@
                     </a>
                 </div>
             </section>
-            <div class="divisor">
-                <span>Ou envie um e-mail</span>
-            </div>
+
             <section class="formulario-contato">
+                <div class="divisor">
+                    <span>Ou envie um e-mail</span>
+                </div>
                 <div class="formulario-contato-caixa">
                     <h2 style="margin-left: 5vh; padding-top: 3.5vh; margin-bottom: 0px;">ENVIE UM E-MAIL</h2>
                     <p style="margin-left: 5vh; color: #B9B8B8; margin-top: 0px;">Respondemos em até 2 dias úteis</p>
-                    <form action="#" method="post">
+                    <form action="https://formsubmit.co/gabrielavitoriadarosasoares@gmail.com" method="post">
                         <input class="input-contato" type="text" id="nome" name="nome"
                             placeholder="Insira seu nome completo..." required>
                         <br>
@@ -99,6 +100,8 @@
                         <textarea class="input-contato" id="mensagem" name="mensagem"
                             placeholder="Escreva sua mensagem..." rows="5" required></textarea>
                         <br>
+                        <input type="hidden" name="_subject" value="Novo contato do site!">
+                        <input type="hidden" name="_captcha" value="false">
                         <button class="btn-enviar" type="submit">Enviar</button>
                     </form>
                 </div>
