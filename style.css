@@ -568,8 +568,11 @@ nav a:active {
     .formulario-contato-caixa {
         width: 100%;
         height: auto;
-        padding: 24px 16px;
+        padding: 20px 4px;
         border-radius: 25px;
+        max-width: 330px;
+        margin: 0 auto;
+    
     }
 
     .formulario-contato-caixa h2 {
@@ -585,6 +588,9 @@ nav a:active {
 
     .input-contato {
         width: 100%;
+        max-width: 300px;  /* 🔥 controla o tamanho real */
+        margin: 0 auto;
+        display: block;
         padding: 14px;
         border-radius: 20px;
         font-size: 14px;
@@ -599,7 +605,7 @@ nav a:active {
     }
 
     .btn-enviar {
-        width: 100%;
+        width: 45%;
         height: 45px;
         font-size: 16px;
         margin-top: 16px;
