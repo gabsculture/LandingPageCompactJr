@@ -779,7 +779,12 @@ h2 span {
 
 #card-1 {
     background: linear-gradient(127.5deg, #320F4B 0%, #100212 21%, black 50%);
-    padding: 20px 20px 40px;
+}
+
+@media (max-width: 768px) {
+    #card-1 {
+        padding: 20px 20px 40px;
+    }
 }
 
 #card-2 {
