@@ -41,11 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             header.classList.remove('hidden');
-            if(!header.classList.contains('hidden') && !textomenu.classList.contains('open')) {
-                menuOverlay.classList.add('open'); // Garante que o overlay esteja fechado
-                menuMobile.classList.add('open'); // Garante que o menu esteja fechado
-                textomenu.classList.add('open'); // Abre o menu
-            }
+
         }
         lastScroll = currentScroll;
     }); 

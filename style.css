@@ -611,6 +611,97 @@ nav a:active {
         margin-top: 16px;
     }
 }
+@media (max-width: 900px) and (min-width: 769px) {
+
+    /* 🔥 estrutura geral */
+    .container-contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        padding: 0 40px;
+    }
+
+    /* 🔥 bloco de texto */
+    .texto-contato-caixa {
+        margin: 0;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    /* 🔥 título */
+    .faca-diagnostico {
+        font-size: 34px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    /* 🔥 contatos */
+    .contato-item {
+        justify-content: center;
+        max-width: 420px;
+        margin: 0 auto 28px auto;
+    }
+
+    .contato-item img {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* 🔥 botão whatsapp */
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 420px;
+        margin: 24px auto;
+    }
+
+    /* 🔥 divisor "ou envie um e-mail" */
+    .divisor {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto;
+        color: #B9B8B8;
+    }
+
+    .divisor::before,
+    .divisor::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(255,255,255,0.3);
+    }
+
+    /* 🔥 formulário */
+    .formulario-contato-caixa {
+        width: 100%;
+        max-width: 600px;
+        padding: 32px;
+        border-radius: 30px;
+    }
+
+    /* 🔥 inputs */
+    .input-contato {
+        width: 100%;
+        max-width: 480px;
+        margin: 12px auto;
+        display: block;
+    }
+
+    #mensagem {
+        height: 260px;
+    }
+
+    /* 🔥 botão enviar */
+    .btn-enviar {
+        width: 180px;
+        margin: 24px auto 0 auto;
+        display: block;
+    }
+
+}
 /* Jean */
 .container {
     width: 90%;
