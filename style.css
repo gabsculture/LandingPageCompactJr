@@ -506,9 +506,8 @@ h1 {
 
 }
 
-divisor.hidden {
+.divisor {
     opacity: 0;
-    visibility: hidden;
 }
 
 nav a,
@@ -610,6 +609,7 @@ nav a:active {
         margin: 40px auto;
         color: #ffffff;
         font-family: 'Carrois Gothic', sans-serif;
+        opacity: 1;
     }
 
     .divisor::before,
@@ -698,7 +698,7 @@ nav a:active {
         margin: 40px auto;
         color: #ffffff;
         font-family: 'Carrois Gothic', sans-serif;
-
+        opacity: 1;
     }
 
     #horario {
