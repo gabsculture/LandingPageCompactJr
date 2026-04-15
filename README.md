@@ -24,12 +24,16 @@ Implementação da landing page com base no planejamento e protótipo definidos 
 A página foi estruturada com as seguintes seções:
 
 História – apresentação da empresa e seu contexto
+
 Serviços – descrição dos serviços oferecidos
+
 Contatos – área dedicada para comunicação com a empresa
 
 ## Tecnologias utilizadas
 HTML5
+
 CSS3
+
 JavaScript
 
 ## Deploy
