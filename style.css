@@ -1123,3 +1123,10 @@ h2 span {
         font-size: 120%;
     }
 }
+
+
+@media (min-width: 768px) {
+    #servicos, #quem-somos {
+        scroll-margin-top: 30px;
+    }
+}
