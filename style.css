@@ -82,6 +82,7 @@ p {
 
 
 @media (max-width: 768px) {
+
     .image_história {
         flex-direction: column;
         justify-content: center;
@@ -91,12 +92,15 @@ p {
         width: 90%;
         height: 30%;
         border-radius: 5%;
+        margin-left: 0%;
     }
 
     .image_história p {
         text-align: center;
         margin-bottom: 0;
         margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 
