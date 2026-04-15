@@ -12,11 +12,11 @@ Este projeto representa a etapa final do processo trainee, consolidando as etapa
 
 O desenvolvimento foi dividido em três fases principais:
 
-# Backlog
+### Backlog
 Levantamento e organização dos requisitos do projeto, definindo funcionalidades e estrutura da aplicação.
-# Protótipo
+### Protótipo
 Criação do design da interface, priorizando usabilidade, estética e experiência do usuário.
-# Desenvolvimento (este repositório)
+### Desenvolvimento (este repositório)
 Implementação da landing page com base no planejamento e protótipo definidos anteriormente.
 
 ## Funcionalidades da landing page
